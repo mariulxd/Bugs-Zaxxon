@@ -33,22 +33,9 @@ public class Sphere : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //Método para mover la nave con el joystick
         MoverNave();
-
-      /*  if(distance.crash == true)
-        {
-            audioSource.PlayOneShot(explosion, 0.25f);
-        }*/
-
-
     }
 
-    void SendtoConsole()
-    {
-        print("Estás moviendo la nave, accediendo a uno de sus métodos");
-    }
 
     void MoverNave()
     {
@@ -107,7 +94,7 @@ public class Sphere : MonoBehaviour
             speedSimulated = 1000f;
         }
 
-        //SpeedText.text = speed.ToString();
+ 
         SpeedText.text = "Velocidad: " + speedSimulated + "km/h";
     }
 
