@@ -28,31 +28,31 @@ public class Plane_Offset : MonoBehaviour
             scrollSpeed = 0f;
 
         }
-        else if (sphere.speed <= 1)
+        else if (sphere.speed <= 8)
         {
             scrollSpeed = 1f;
 
         }
-        else if (sphere.speed <= 5)
+        else if (sphere.speed <= 9.5)
         {
             scrollSpeed = 1.5f;
 
         }
-        else if (sphere.speed <= 10)
+        else if (sphere.speed <= 11.5)
         {
             scrollSpeed = 2f;
         }
-        else if (sphere.speed <= 25)
+        else if (sphere.speed <= 13)
         {
             scrollSpeed = 2.5f;
 
         }
-        else if (sphere.speed <= 50)
+        else if (sphere.speed <= 14.5)
         {
             scrollSpeed = 3f;
 
         }
-        else if (sphere.speed <= 100)
+        else if (sphere.speed <= 16)
         {
             scrollSpeed = 3.5f;
 

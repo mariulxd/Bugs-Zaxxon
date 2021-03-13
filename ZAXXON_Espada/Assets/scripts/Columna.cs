@@ -8,10 +8,6 @@ public class Columna : MonoBehaviour
     public GameObject miNave;
     Sphere sphere;
 
-    private Vector3 MyPos;
-    //[SerializeField] Vector3 DestPos;
-    //private Vector3 FinalPos;
-
     [SerializeField] float mySpeed;
 
     
@@ -20,64 +16,53 @@ public class Columna : MonoBehaviour
     {
         miNave = GameObject.Find("Sphere");
         sphere = miNave.GetComponent<Sphere>();
-
-        //sphere = GetComponent<Sphere>();
-        //mySpeed = sphere.speed;
-        mySpeed = 10f;
-        //print(mySpeed);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //MyPos = transform.position;
-        //FinalPos = MyPos + DestPos * Time.deltaTime * mySpeed;
-        //transform.position = FinalPos;
-        //print(MyPos);
-
         if (sphere.speed == 0)
         {
             mySpeed = 0f;
 
         }
-        else if (sphere.speed <= 1)
+        else if (sphere.speed <= 8)
         {
             mySpeed = 10f;
 
         }
-        else if (sphere.speed <= 5)
+        else if (sphere.speed <= 8.75)
         {
             mySpeed = 15f;
            
         }
-        else if (sphere.speed <= 10)
+        else if (sphere.speed <= 10.75)
         {
             mySpeed = 20f;
           
         }
-        else if (sphere.speed <= 25)
+        else if (sphere.speed <= 12)
         {
             mySpeed = 25f;
             
         }
-        else if (sphere.speed <= 50)
+        else if (sphere.speed <= 13.5)
         {
-            mySpeed = 30f;
+            mySpeed = 27f;
          
         }
-        else if (sphere.speed <= 100)
+        else if (sphere.speed <= 15)
         {
-            mySpeed = 35f;
+            mySpeed = 30f;
        
         }
         else
         {
-            mySpeed = 40f;
+            mySpeed = 35f;
    
         }
 
         transform.Translate(Vector3.back * Time.deltaTime * mySpeed);
-
         if(transform.position.z < -60)
         {
             Destroy(gameObject);

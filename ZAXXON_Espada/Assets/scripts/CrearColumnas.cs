@@ -60,13 +60,8 @@ public class CrearColumnas : MonoBehaviour
         int n;
         for (n=0; ; n++ )
         {
-            //print(n);
-            //Intancio el prefab en coordenadas 0,0,0
-            //Instantiate(MyColumn);
             CrearColumna();
-
-            /*Dependiendo de la velocidad de la nave se crearán las columnas en mayor o menor cantidad, para mantener la dificultad e ir incrementándola*/
-
+            CrearColumna();
             if (sphere.speed == 0)
             {
                 ColumnQuantity = 0f;
@@ -74,27 +69,27 @@ public class CrearColumnas : MonoBehaviour
             }
             else if (sphere.speed <= 5)
             {
-                ColumnQuantity = 1.5f;
+                ColumnQuantity = 1f;
 
             }
             else if (sphere.speed <= 10)
             {
-                ColumnQuantity = 2f;
+                ColumnQuantity = 1.2f;
 
             }
             else if (sphere.speed <= 25)
             {
-                ColumnQuantity = 2.5f;
+                ColumnQuantity = 1.5f;
 
             }
             else if (sphere.speed <= 50)
             {
-                ColumnQuantity = 3f;
+                ColumnQuantity = 1.8f;
 
             }
             else if (sphere.speed <= 100)
             {
-                ColumnQuantity = 3.5f;
+                ColumnQuantity = 2f;
 
             }
             else
@@ -102,8 +97,7 @@ public class CrearColumnas : MonoBehaviour
                 ColumnQuantity = 5f;
 
             }
-
-            yield return new WaitForSeconds(1*(1/ColumnQuantity));
+            yield return new WaitForSeconds(1/ColumnQuantity);
         }
     }
 }
