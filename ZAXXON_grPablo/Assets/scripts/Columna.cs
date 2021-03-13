@@ -20,24 +20,16 @@ public class Columna : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         Nave = GameObject.Find("Nave");
         sphere = Nave.GetComponent<Sphere>();
-        //mySpeed = sphere.speed;
-        mySpeed = 25f;
-        //print(mySpeed);
+        mySpeed = sphere.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //MyPos = transform.position;
-        //FinalPos = MyPos + DestPos * Time.deltaTime * mySpeed;
-        //transform.position = FinalPos;
-        //print(MyPos);
 
-        transform.Translate(Vector3.back * Time.deltaTime * -mySpeed);
+        transform.Translate(Vector3.back * Time.deltaTime * -mySpeed * 1.5f);
 
         if(transform.position.z < -10)
         {
